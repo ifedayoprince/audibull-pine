@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>AudiBull</title>
+  
+	<!-- Pinocchio-related styles -->
+	<link rel="stylesheet" href="https://pino-sdk.vercel.app/css/core.css">
+  
+	<link rel="stylesheet" href="style.css">
+
+	<script src="https://pino-sdk.vercel.app/utils/tailwindcss.js"></script>
+</head>
+<body id="frame-body" class="flex flex-col items-center px-6">
+	<header class="heading w-full mb-6 pt-2">
+		<p class="text-3xl">AudiBull</p>
+	</header>
+	<section class="">
+		<div class="w-[40vw] h-[40vw] absolute top-[30vw] left-[30vw] bg-gray-700 rounded-[30px] flex justify-center items-center">
+			<img class="w-[20vw] h-[20vw] start" src="/assets/icons8-play-button-circled-80.png" alt="Audio wave ">
+		</div>
+		<audio id="audio" style="display:none;"></audio>
+	</section>
+	<footer class="px-6">
+		<p class="w-[88vw] text-sm text-end">5PM | Tuesday </p>
+	</footer>
+
+	<script src="https://pino-sdk.vercel.app/utils/axios.min.js"></script>
+	
+	<script type="module" src="index.js"></script>
+</body>
+</html>

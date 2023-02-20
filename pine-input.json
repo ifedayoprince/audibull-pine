@@ -1,0 +1,8 @@
+[
+	{
+		"type" : "file", 
+		"title" : "Audio", 
+		"name" :"aud", 
+		"ext": "mp3|auv|aac"
+	}
+]
