@@ -2,7 +2,7 @@
 	{
 		"type" : "file", 
 		"title" : "Audio", 
-		"name" :"aud", 
+		"name" :"aid", 
 		"ext": "mp3|auv|aac"
 	}
 ]

@@ -8,7 +8,7 @@ app.on('offline', showError);
 
 function startPine() {
 	let audio = document.querySelector('#audio');
-	app.fetch('GET', `file.84cdc778-e9a8-430b-b04f-9c57d81a7cf1`, (data)=>{
+	app.fetch('GET', `file.${app.params.aid}`, (data)=>{
 		audio.src = data.url;
 		let f = document.querySelector('.start');
 		f.addEventListener('click', (e)=>{
