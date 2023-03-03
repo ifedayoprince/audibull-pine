@@ -6,18 +6,21 @@ app.resolve(new PinoResolver(), startPine);
 app.on('offline', showError);
 // app.on('init', startPine);
 
-function startPine() {
+async function startPine() {
 	let audio = document.querySelector('#audio');
-	app.fetch('GET', `file.${app.params.aid}`, (data)=>{
-		audio.src = data.url;
-		let f = document.querySelector('.start');
-		f.addEventListener('click', (e)=>{
-			f.src = '/assets/audio-wave-100.png'
-			audio.play();
-		})
-		audio.addEventListener('ended', (e)=>{
-			f.src = '/assets/icons8-play-button-circled-80.png '
-		})
+	let data = (await app.fetch(`file.${app.params.aid}`)).data;
+	
+	audio.src = data.url;
+	document.querySelector('.skelet').classList.add('hidden');
+	audio.parentElement.classList.remove('hidden');
+	
+	let f = document.querySelector('.start');
+	f.addEventListener('click', (e)=>{
+		f.src = '/assets/audio-wave-100.png'
+		audio.play();
+	})
+	audio.addEventListener('ended', (e)=>{
+		f.src = '/assets/icons8-play-button-circled-80.png '
 	})
 } 
 
