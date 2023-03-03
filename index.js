@@ -10,6 +10,7 @@ async function startPine() {
 	let audio = document.querySelector('#audio');
 	let data = (await app.fetch(`file.${app.params.aid}`)).data;
 	
+	console.log(data.url)
 	audio.src = data.url;
 	document.querySelector('.skelet').classList.add('hidden');
 	audio.parentElement.classList.remove('hidden');

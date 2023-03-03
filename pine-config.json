@@ -1,6 +1,7 @@
 {
 	"name": "AudiBull",
 	"version": "1.0.0", 
+	"url": "https://audibull-pine.vercel.app", 
 	"description": "Post audio notes on Facebook.", 
 	"author": "Pinocchio Team"
 }

@@ -3,6 +3,6 @@
 		"type" : "file", 
 		"title" : "Audio", 
 		"name" :"aid", 
-		"ext": "mp3|auv|aac"
+		"exts": "audio/*"
 	}
 ]
